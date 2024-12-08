@@ -1,0 +1,13 @@
+defaults:
+  - model: hifigan
+  - metrics: empty
+  - datasets: custom_dir 
+  - dataloader: inference
+  - transforms: spectrogram
+  - _self_
+inferencer:
+  device_tensors: [] # which tensors should be on device (ex. GPU)
+  device: auto # device name or "auto"
+  save_path: "example" # any name here, can be a dataset name
+  seed: 1
+  from_pretrained: /Users/antonytce/Desktop/hw3/100.pth

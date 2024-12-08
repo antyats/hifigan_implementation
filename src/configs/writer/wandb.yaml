@@ -1,0 +1,9 @@
+_target_: src.logger.WandBWriter
+project_name: "test-hifigan"
+entity: null
+run_name: "run"
+mode: "offline"
+loss_names: ["loss", "disc_loss"]
+log_checkpoints: False # set to True if you want to log save_dir with checkpoints to W&B
+audio_sample_rate: 22050
+id_length: 8

@@ -1,0 +1,3 @@
+test:
+  _target_: src.datasets.CustomDirDataset
+  dir_path: /Users/antonytce/Desktop/hw3/texts/
