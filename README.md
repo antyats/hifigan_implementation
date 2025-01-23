@@ -8,12 +8,6 @@
   <a href="#license">License</a>
 </p>
 
-## About
-
-This repository contains a template for solving Voice Encoder task with PyTorch. This template branch is a part of the [HSE DLA course](https://github.com/markovka17/dla) ASR homework. Some parts of the code are missing (or do not follow the most optimal design choices...) and students are required to fill these parts themselves (as well as writing their own models, etc.).
-
-See the task assignment [here](https://github.com/markovka17/dla/tree/2024/hw1_asr).
-
 ## Installation
 
 Follow these steps to install the project:
@@ -73,7 +67,7 @@ Where `CONFIG_NAME` is a config from `src/configs` and `HYDRA_CONFIG_ARGUMENTS` 
 Change dir_path in src/configs/datasets/custom_dir.yaml to directory where transcriptions are stored
 and in
 
-To run syntenize your own texts, run the following command:
+To syntenize your own texts, run the following command:
 
 ```bash
 python3 syntenizer.py -cn=inferencer.yaml
