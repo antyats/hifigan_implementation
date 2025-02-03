@@ -48,37 +48,33 @@ Follow these steps to install the project:
    pre-commit install
    ```
 
-## How To Use
+# How To Use
 
-Trained model weights are located in 100.pth file in the ./ directory
+## Model Weights
+The trained model weights are located in the `100.pth` file in the `./` directory.
 
-Change weigths path in src/configs/hifigan.yaml and src/configs/inference.yaml
+Update the weights path in the following configuration files:
+- `src/configs/hifigan.yaml`
+- `src/configs/inference.yaml`
 
+Modify the `from_pretrained` field as follows:
+```yaml
 from_pretrained: [Your_path.pth]
+```
 
-To train a model, run the following command:
-
-```bash
+## Training the Model
+To train the model, execute the following command:
+```sh
 python3 train.py -cn=hifigan.yaml
 ```
+where `hifigan.yaml` is the configuration file located in `src/configs`. You may also include optional Hydra configuration arguments.
 
-Where `CONFIG_NAME` is a config from `src/configs` and `HYDRA_CONFIG_ARGUMENTS` are optional arguments.
+## Dataset Configuration
+Update the `dir_path` field in `src/configs/datasets/custom_dir.yaml` to specify the directory where transcriptions are stored.
 
-Change dir_path in src/configs/datasets/custom_dir.yaml to directory where transcriptions are stored
-and in
-
-To syntenize your own texts, run the following command:
-
-```bash
+## Synthesizing Texts
+To synthesize your own texts, run:
+```sh
 python3 syntenizer.py -cn=inferencer.yaml
 ```
-Audios will be saved in the directory with transcriptions
-
-## Credits
-
-This repository is based on a [PyTorch Project Template](https://github.com/Blinorot/pytorch_project_template).
-
-## License
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-"# temp" 
+Generated audio files will be saved in the directory containing the transcriptions.
